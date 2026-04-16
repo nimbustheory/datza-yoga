@@ -213,11 +213,11 @@ function PageHero({ image, title, subtitle }) {
   return (
     <div style={{ position: "relative", minHeight: 220, overflow: "hidden", marginBottom: 16 }}>
       {isUrl && !imgError ? (
-        <img src={image} alt="" loading="lazy" onError={() => setImgError(true)} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.7)" }} />
+        <img src={image} alt="" loading="lazy" onError={() => setImgError(true)} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.84)" }} />
       ) : (
         <div style={{ position: "absolute", inset: 0, background: isGradient ? image : GRADIENTS.home }} />
       )}
-      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.05) 50%, rgba(0,0,0,0.15) 100%)" }} />
+      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.36) 0%, rgba(0,0,0,0.04) 50%, rgba(0,0,0,0.12) 100%)" }} />
       <div style={{ position: "relative", padding: "80px 20px 24px", display: "flex", flexDirection: "column", justifyContent: "flex-end", minHeight: 240 }}>
         <h1 style={{ fontFamily: "'Libre Baskerville', serif", fontSize: "3.5rem", fontWeight: 600, color: "#fff", margin: 0, lineHeight: 1.1 }}>{title}</h1>
         {subtitle && <p style={{ fontSize: 15, color: "rgba(255,255,255,.85)", margin: "8px 0 0", maxWidth: "85%", lineHeight: 1.5 }}>{subtitle}</p>}
