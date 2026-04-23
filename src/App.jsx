@@ -1074,13 +1074,13 @@ export default function App({ startInAdmin, onExitAdmin, onEnterAdmin }) {
 
   const mainTabs = [
     { id: "home", label: "Home", icon: Home },
-    { id: "classes", label: "Classes", icon: Wind },
     { id: "schedule", label: "Schedule", icon: Calendar },
     { id: "practice", label: "Practice", icon: TrendingUp },
+    { id: "community", label: "Community", icon: Heart },
     { id: "more", label: "More", icon: Menu },
   ];
   const moreItems = [
-    { id: "community", label: "Community", icon: Heart },
+    { id: "classes", label: "Classes", icon: Wind },
     { id: "teachers", label: "Teachers", icon: Users },
     { id: "membership", label: "Membership", icon: CreditCard },
     { id: "events", label: "Events", icon: CalendarDays },
