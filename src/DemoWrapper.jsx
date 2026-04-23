@@ -23,7 +23,7 @@ export default function DemoWrapper() {
     <div style={{ display: "flex", minHeight: "100vh", background: "#f5f5f5", fontFamily: "'Outfit', system-ui, sans-serif", color: "#1a1a1a" }}>
 
       {/* --- LEFT SIDEBAR --- */}
-      <aside style={{ width: 320, flexShrink: 0, background: "#fff", borderRight: "1px solid #e5e7eb", display: "flex", flexDirection: "column", position: "fixed", top: 0, left: 0, bottom: 0, zIndex: 10, overflowY: "auto", scrollbarWidth: "none", msOverflowStyle: "none" }}>
+      <aside style={{ width: 320, flexShrink: 0, background: "#fff", borderRight: "1px solid #e5e7eb", display: "flex", flexDirection: "column", height: "100%", position: "fixed", top: 0, left: 0, bottom: 0, zIndex: 10, overflowY: "auto", scrollbarWidth: "none", msOverflowStyle: "none" }}>
         {/* Prototype Label */}
         <div style={{ padding: "16px 24px 0" }}>
           <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: accent, background: `${accent}12`, padding: "4px 10px", borderRadius: 4 }}>Prototype Demo</span>
@@ -43,17 +43,17 @@ export default function DemoWrapper() {
         </div>
 
         {/* Feature List */}
-        <div style={{ padding: "0 24px", flex: 1 }}>
+        <div style={{ padding: "0 24px", flex: 1, display: "flex", flexDirection: "column" }}>
           <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9ca3af", marginBottom: 12 }}>App Features</div>
-          <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 8, flex: 1, justifyContent: "space-between" }}>
             {c.features.map((f, i) => (
-              <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 10, padding: "8px 10px", borderRadius: 8, background: "#f9fafb" }}>
-                <div style={{ width: 28, height: 28, borderRadius: 6, background: `${accent}12`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 1 }}>
-                  <Star size={14} color={accent} />
+              <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 12, padding: 16, borderRadius: 8, background: "#f9fafb" }}>
+                <div style={{ width: 32, height: 32, borderRadius: 6, background: `${accent}12`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 1 }}>
+                  <Star size={16} color={accent} />
                 </div>
                 <div>
-                  <div style={{ fontSize: 13, fontWeight: 600, color: "#374151" }}>{f.label}</div>
-                  <div style={{ fontSize: 11, color: "#9ca3af", marginTop: 1, lineHeight: 1.3 }}>{f.description}</div>
+                  <div style={{ fontSize: 16, fontWeight: 600, color: "#374151" }}>{f.label}</div>
+                  <div style={{ fontSize: 13, color: "#9ca3af", marginTop: 2, lineHeight: 1.4 }}>{f.description}</div>
                 </div>
               </div>
             ))}
@@ -61,7 +61,7 @@ export default function DemoWrapper() {
         </div>
 
         {/* Footer */}
-        <div style={{ padding: "16px 24px 20px", borderTop: "1px solid #e5e7eb" }}>
+        <div style={{ padding: "16px 24px 20px", borderTop: "1px solid #e5e7eb", marginTop: "auto" }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#9ca3af", textAlign: "center" }}>
             Built by <span style={{ color: accent }}>LUMI</span> — LumiClass.App
           </div>
